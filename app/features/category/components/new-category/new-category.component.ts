@@ -2,9 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { CategoryService } from '../../services/category.service';
-import { Category } from '../../../../core/models/category.model';
 import { ToastService } from '../../../../shared/services/toast.service';
-import { ValidationResponse } from '../../../../core/models/validation-response.model';
+import { Category } from '../../models/category.model';
+import { ValidationResponse } from '../../models/validation-response.model';
 
 @Component({
   selector: 'app-new-category',

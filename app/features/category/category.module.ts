@@ -6,6 +6,7 @@ import { CategoryRoutingModule } from './category-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../shared/shared.module';
+import { CategoryService } from './services/category.service';
 
 @NgModule({
   declarations: [
@@ -20,5 +21,8 @@ import { SharedModule } from '../../shared/shared.module';
     FormsModule,
     SharedModule
   ],
+  providers: [
+    CategoryService
+  ]
 })
 export class CategoryModule {}

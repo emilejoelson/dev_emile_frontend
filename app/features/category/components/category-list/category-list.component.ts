@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CategoryService } from '../../services/category.service';
-import { Category } from '../../../../core/models/category.model';
 import { Router } from '@angular/router';
+import { Category } from '../../models/category.model';
 
 @Component({
   selector: 'app-category-list',
@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CategoryListComponent implements OnInit {
   categories: Category[] = [];
+  searchUser: any = {};
 
   constructor(
     private categoryService: CategoryService,
