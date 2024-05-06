@@ -1,0 +1,35 @@
+#category-details {
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  padding: 20px;
+  width: 50%;
+  margin: 10% auto;
+}
+
+.category-container {
+  margin-bottom: 20px;
+}
+
+.category-title {
+  color: #007bff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.category-info p {
+  margin-bottom: 5px;
+}
+
+.category-info strong {
+  font-weight: bold;
+}
+
+.loading-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.loading-text {
+  font-style: italic;
+  color: #999;
+}

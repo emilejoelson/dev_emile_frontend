@@ -1,0 +1,80 @@
+<!-- category-list.component.html -->
+<div class="categories">
+  <div class="flex justify-between ml-10 mr-10">
+    <div class="font-bold">Category List</div>
+    <button
+      class="add-category-icon font-arial-narrow"
+      (click)="addNewCategory()"
+    >
+      <i class="fa-thin fa-plus"></i>
+    </button>
+  </div>
+  <div class="category-list">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <label for="name" class="input-label">Name</label>
+            <input
+              class="category-input "
+              id="name"
+              placeholder="name"
+              type="text"
+            />
+          </th>
+          <th>
+            <label for="description" class="input-label">Description</label>
+            <input
+              class="category-input"
+              id="description"
+              placeholder="description"
+              type="text"
+            />
+          </th>
+          <th>
+            <label for="status" class="input-label">Status</label>
+            <select id="status" name="status" class="category-input">
+              <option value>All</option>
+              <option value="true">Enabled</option>
+              <option value="false">Disabled</option>
+            </select>
+          </th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of categories" class="text-base">
+          <td>{{ category.name }}</td>
+          <td class="truncate max-w-xs">{{ category.description }}</td>
+          <td class="cursor-pointer flex justify-center items-center">
+            <i
+              class="fa-solid"
+              [ngClass]="{
+                'fa-toggle-on': category.status,
+                'fa-toggle-off': !category.status
+              }"
+              (click)="toggleCategoryStatus(category)"
+            ></i>
+          </td>
+          <td>
+            <i
+              class="far fa-eye text-blue-500 cursor-pointer"
+              (click)="showCategoryDetails(category.id)"
+            ></i>
+            <i
+              class="far fa-edit text-yellow-500 ml-3 cursor-pointer"
+              (click)="editCategory(category)"
+            ></i>
+            <i
+              class="far fa-trash-alt text-red-500 ml-3 cursor-pointer"
+              (click)="deleteCategory(category.id)"
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <app-pagination
+    >
+    </app-pagination>
+  </div>
+</div>
